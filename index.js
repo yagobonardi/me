@@ -10,3 +10,7 @@ function setLocationTime(){
         document.getElementById('location').innerHTML = 'Brazil/SP &#127747';
     }
 }
+
+function sendMail(){
+    window.open('mailto:yagobonardi@mail.com');
+}
