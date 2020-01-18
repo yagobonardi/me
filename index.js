@@ -12,5 +12,5 @@ function setLocationTime(){
 }
 
 function sendMail(){
-    window.open('mailto:yagobonardi@mail.com');
+    window.open('mailto:yagobonardi@gmail.com');
 }
