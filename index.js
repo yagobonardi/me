@@ -1,3 +1,5 @@
+let theme = 'dark';
+
 function setLocationTime(){
     let date = new Date();
     let hour = date.getHours();
@@ -16,26 +18,14 @@ function sendMail(){
 }
 
 function changeTheme() {
-    var actualTheme = document.getElementById('content').className;
+    theme = theme == 'dark' ? 'light' : 'dark';
 
-    if (actualTheme === 'body-dark'){
-        document.getElementById('content').className = 'body-light';
-        document.getElementById('git').className = 'fab fa-github-alt icon-light';
-        document.getElementById('linkedin').className = 'fab fa-linkedin-in icon-light';
-        document.getElementById('twitter').className = 'fab fa-twitter icon-light';
-        document.getElementById('mail').className = 'fas fa-at icon-light';
-        document.getElementById('name').className = 'text-light';
-        document.getElementById('profession').className = 'text-light text-small';
-        document.getElementById('location').className = 'text-light text-small';
-    } 
-    else if (actualTheme === 'body-light') {
-        document.getElementById('content').className = 'body-dark';
-        document.getElementById('git').className = 'fab fa-github-alt icon-dark';
-        document.getElementById('linkedin').className = 'fab fa-linkedin-in icon-dark';
-        document.getElementById('twitter').className = 'fab fa-twitter icon-dark';
-        document.getElementById('mail').className = 'fas fa-at icon-dark';
-        document.getElementById('name').className = 'text-dark';
-        document.getElementById('profession').className = 'text-dark text-small';
-        document.getElementById('location').className = 'text-dark text-small';
-    }
+    document.getElementById('content').className = `body-${theme}`;
+    document.getElementById('git').className = `fab fa-github-alt icon-${theme}`;
+    document.getElementById('linkedin').className = `fab fa-linkedin-in icon-${theme}`;
+    document.getElementById('twitter').className = `fab fa-twitter icon-${theme}`;
+    document.getElementById('mail').className = `fas fa-at icon-${theme}`;
+    document.getElementById('name').className = `text-${theme}`;
+    document.getElementById('profession').className = `text-${theme} text-small`;
+    document.getElementById('location').className = `text-${theme} text-small`;
 }
