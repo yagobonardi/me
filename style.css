@@ -5,7 +5,6 @@ html, body{
 }
 
 .circle {
-    background-color: #aaa;
     border-radius: 50%;
     width: 15rem;
     height: 15rem;
@@ -21,8 +20,12 @@ html, body{
   justify-content: center;
 }
 
-body {
+.body-dark {
     background-color: #15202B
+}
+
+.body-light{
+  background-color: #ffffff
 }
 
 @font-face {
@@ -30,11 +33,19 @@ body {
   src: url("./fonts/computer-font.ttf");
 }
 
-.text {
+.text-dark {
   text-align: center;
   font-family: 'computer-font';
   src: url("./fonts/computer-font.ttf");
   color: white;
+  font-size: 5rem;
+}
+
+.text-light {
+  text-align: center;
+  font-family: 'computer-font';
+  src: url("./fonts/computer-font.ttf");
+  color: black;
   font-size: 5rem;
 }
 
@@ -50,8 +61,75 @@ a {
   text-decoration: none;
 }
 
-.icon {
+.icon-dark {
   color:white;
   margin: .5rem;
   font-size: 3.5rem;
+}
+
+.icon-light{  
+  color:black;
+  margin: .5rem;
+  font-size: 3.5rem;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;  
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: #15202B;
+  -webkit-transition: .4s;
+  transition: .4s;  
+  border-radius: 50%;
+}
+
+input:not(:checked) + .slider {
+  background-color: #d9d9d9;
+}
+
+input:checked + .slider {
+  background-color: white;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px white;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+#switch-div{
+  display: flex;
+  justify-content: flex-end;
 }
