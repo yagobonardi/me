@@ -8,34 +8,38 @@
     <script src="index.js"></script>
 </head>
 
-<body onload="setLocationTime()">
-
-    <div class="container-main">
+<body id="content" class="body-dark" onload="setLocationTime()">
+    <div class="container-main">        
+        <div id="switch-div">
+            <label class="switch">
+                <input id="switch" type="checkbox" checked onclick="changeTheme()">
+                <span class="slider"></span>
+              </label>
+        </div>
         <div class="center-flex">
             <img class="circle" src="https://avatars3.githubusercontent.com/u/30670318?s=460&v=4" />
         </div>
-        <h1 class="text">YAGO BONARDI</h1>
+        <h1 id="name" class="text-dark">YAGO BONARDI</h1>
 
-        <h2 class="text text-small">software engineer &#128187;</h2>
+        <h2 id="profession" class="text-dark text-small">software engineer &#128187;</h2>
 
-        <h2 id="location" class="text text-small"></h2>
+        <h2 id="location" class="text-dark text-small"></h2>
 
         <nav class="center">
             <a href="https://github.com/yagobonardi">
-                <i class="fab fa-github-alt icon"></i>
+                <i id="git" class="fab fa-github-alt icon-dark"></i>
             </a>
             <a href="https://www.linkedin.com/in/yago-bonardi-93a164145/">
-                <i class="fab fa-linkedin-in icon"></i>
+                <i id="linkedin" class="fab fa-linkedin-in icon-dark"></i>
             </a>
             <a href="https://twitter.com/yagobonardi">
-                <i class="fab fa-twitter icon"></i>
+                <i id="twitter" class="fab fa-twitter icon-dark"></i>
             </a>
             <a onclick="sendMail()">
-                <i class="fas fa-at icon"></i>
+                <i id="mail" class="fas fa-at icon-dark"></i>
             </a>
         </nav>
     </div>
-
 </body>
 
 </html>
